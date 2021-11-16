@@ -1,0 +1,5 @@
+# Exclude configuration files
+*.config
+
+# Exclude script backups
+*.backup
