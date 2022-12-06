@@ -45,3 +45,19 @@ DAYS_TO_KEEP=7
 
 # How many weeks to keep weekly backups
 WEEKS_TO_KEEP=5
+
+
+#### SETTINGS FOR ENCRYPTION ####
+
+# The script uses GPG to encrypt the backup files.
+# It requires that a GPG public key is on the same machine as the backup
+# script. 
+
+# Set whether the backup files should be encrypted (yes or no)
+ENCRYPT_BACKUP_FILES=no
+
+# Set whether the unencrypted files should be deleted (yes or no)
+SHRED_CLEAR_BACKUP_FILES=no
+
+# GPG key used for encryption
+#GPG_KEY_ID=
