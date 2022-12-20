@@ -9,6 +9,9 @@ BACKUP_USER=
 # Optional hostname to adhere to pg_hba policies.  Will default to "localhost" if none specified.
 HOSTNAME=
 
+# Optional port the database server is listening to. Will default to 5432 if not specified.
+PORT=5432
+
 # Optional username to connect to database as.  Will default to "postgres" if none specified.
 USERNAME=
 
