@@ -1,6 +1,6 @@
 # PostgreSQL Backup
 
-This PosgtreSQL backup script is a simple script built using `pg_dump` and `pg_dumpall` to generate backups of a PostgreSQL cluster.
+This PosgtreSQL backup script is a simple script built using `pg_dump` and `pg_dumpall` to generate backups of a PostgreSQL cluster.  
 Features:
 - Can backup globals (users, roles, etc...).
 - Backup of schema only for selected databases.
