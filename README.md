@@ -1,3 +1,13 @@
+# PostgreSQL Backup
+
+This PosgtreSQL backup script is a simple script built using `pg_dump` and `pg_dumpall` to generate backups of a PostgreSQL cluster.
+Features:
+- Can backup globals (users, roles, etc...).
+- Backup of schema only for selected databases.
+- Option to encrypt the backup files with GPG.
+- All the backup files of each database are stored in a compressed tar archive.
+- A SHA256 hash of the backup file is generated to control the backup file integrity after extracting and decrypting it.
+
 # Installation
 
 ```sh
@@ -56,7 +66,7 @@ To have the script's output saved to a file, add `2>&1 | tee /path/to/file.log` 
 ## Send the backup log by email
 
 It is possible to have the content of the log file sent by email. It requires that `mailutils` be installed on the server.
-To send the logs by email, add `| mail -s "Email's subject" alice@example.com`.
+To send the logs by email, add `| mailx -s "Email's subject" alice@example.com`.
 ```
 00 23 * * * /path/to/pg_backup_rotated.sh -c /path/to/pg_backup.config 2>&1 | tee /path/to/file.log | mailx -s "Email's subject" alice@example.com`
 ```
