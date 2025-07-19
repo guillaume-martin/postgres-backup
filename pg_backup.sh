@@ -77,7 +77,7 @@ echo "Backup Directory = $BACKUP_DIR"
 
 echo -e "\n--------------------------------------------\n"
 
-### Set global vairables
+### Set global variables
 START_TIME=$SECONDS
 DAY_OF_MONTH=`date +%d`
 DAY_OF_WEEK=`date +%u` # 1-7 (Monday-Sunday)
