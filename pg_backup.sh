@@ -161,7 +161,7 @@ fi;
 
 echo "Deleting all expired $BACKUP_TYPE backup files..."
 if [ BACKUP_TYPE != "daily" ]; then
-    find $BAKUP_DIR -maxdepth 1 -name "*$BACKUP_TYPE" -exec rm -rf '{}' ';'
+    find $BAKUP_DIR -maxdepth 1 -mtime +$EXPIRED_DAYS -name "*$BACKUP_TYPE" -exec rm -rf '{}' ';'
     test $? -ne 0 && echo "ERROR: failed to delete older $BACKUP_TYPE backup files: "
 else
     find $BACKUP_DIR -maxdepth 1 -mtime +$DAYS_TO_KEEP -name "*-daily" -exec rm -rf '{}' ';'
